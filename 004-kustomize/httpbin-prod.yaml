@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: httpbin-dev
+  name: httpbin-prod
   namespace: argocd
 spec:
   destination:
-    namespace: httpbin-dev
+    namespace: httpbin-prod
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: 004-kustomize/overlays/dev
+    path: 004-kustomize/overlays/prod
     repoURL: https://github.com/belghithahmed/argo.git
     targetRevision: HEAD
     kustomize:
       commonAnnotations:
         merry: christmas-fulks
-      namePrefix: dev-
+      namePrefix: prod-

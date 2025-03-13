@@ -9,6 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: TODO
+    path: 004-kustomize/overlays/dev
     repoURL: https://github.com/belghithahmed/argo.git
     targetRevision: HEAD

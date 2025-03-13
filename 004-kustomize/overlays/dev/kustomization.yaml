@@ -4,4 +4,5 @@ patches:
   - path: patch.yaml
     target:
       kind: Deployment
-
+commonLabels:
+  happy: newyear

@@ -9,7 +9,8 @@ spec:
   - http:
       paths:
       - pathType: ImplementationSpecific
-        path: /httpbin(/|$)(.*)
+        path: /httpbin-prod(/|$)(.*)
+
         backend:
           service:
             name: httpbin

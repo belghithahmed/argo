@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpbin-github
+  namespace: argocd
+spec:
+  destination:
+    namespace: httpbin
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: 003-directory/manifests
+    repoURL: https://github.com/belghithahmed/argo.git
+    targetRevision: HEAD
+    directory:
+      recurse: true
+

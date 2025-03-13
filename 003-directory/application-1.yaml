@@ -13,5 +13,5 @@ spec:
     repoURL: https://github.com/belghithahmed/argo.git
     targetRevision: HEAD
     directory:
+      exclude: 'rbac/rolebinding.yaml'
       recurse: true
-      exclude: 'rbac/*'
